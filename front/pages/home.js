@@ -18,7 +18,7 @@ export default function Home() {
           <div className={styles.navLateral}>
             <h2 className={styles.navTitulo}>EMAJ</h2>
             <hr></hr>
-            <br />
+            <br/>
             <button>Botão 1</button>
             <button>Botão 2</button>
             <button>Botão 3</button>
