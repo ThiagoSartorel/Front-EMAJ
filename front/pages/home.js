@@ -1,10 +1,28 @@
+import axios from 'axios';
 import Head from 'next/head'
 import Image from 'next/image'
 import { useForm } from "react-hook-form";
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
+import { parseCookies, setCookie } from 'nookies'
+import { removeCookies } from "cookies-next";
+import Router from 'next/router'
 
 
 export default function Home() {
+  function logout(){
+    var cookeis = parseCookies()
+    var resposta = axios.post(process.env.BACKEND + 'logado/logout','data', 
+      {headers:
+          {Authorization: `bearer ${cookeis['emaj']}` }
+      }
+    )
+    if(resposta.status == 200){
+      removeCookies('emaj')
+      Router.push('/login')
+    }
+  }
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +41,7 @@ export default function Home() {
             <button>Botão 2</button>
             <button>Botão 3</button>
             <button>Botão 4</button>
-            <button className={styles.btnSair}>Sair</button>
+            <button className={styles.btnSair} onClick={(event) => logout(event)} >Sair</button>
           </div>
           <div className={styles.board}>
             <div className={styles.conteudo}>

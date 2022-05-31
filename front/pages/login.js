@@ -3,7 +3,9 @@ import Image from 'next/image'
 import axios from 'axios'
 import { useForm } from "react-hook-form";
 import styles from '../styles/Home.module.css'
-import Login1 from './components/loginRa';
+import Auth from './components/loginRa';
+
+import logo from '../public/Login/logo.png'
 
 function posicao(num) {
 }
@@ -27,9 +29,14 @@ export default function Home() {
         <div className={styles.imagemLogin}>
         </div>
         <div className={styles.formLogin}>
+          <div className={styles.logo}>
+            <Image src={logo} className={styles.logo}></Image>
+          </div>
+          
           <h1 className={styles.tituloLogin}>LOGIN</h1>
           <div className={styles.formulario}>
-            <Login1></Login1>
+            <Auth></Auth>
+            
           </div>
           <footer className={styles.footer}>
               <h4>NIU</h4>

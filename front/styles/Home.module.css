@@ -31,7 +31,7 @@
   flex-grow: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .grid {
     width: 100%;
     flex-direction: column;
@@ -77,16 +77,23 @@
   border-left: 1px solid #01375048;
 } */
 
+.logo{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 530px;
+  max-height: 300px
+}
+
 .formulario {
-  font-size:18px;
-  width: 40%;
+  font-size:15px;
+  width: 60%;
   text-align: start;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 15px;
   border-radius:20px;
   background-color: #fff;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 
 .btnLoginavancar{
@@ -126,7 +133,7 @@
 }
 
 .tituloLogin{
-  margin-top: 20%;
+  margin-top: 0%;
   color: white;
 }
 
@@ -172,4 +179,45 @@
 
 .conteudo{
   padding-left: 25px;
+}
+
+.loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .formLogin{
+    width: 100%;
+    background-color: #262d35af;
+  }
+  .formulario{
+    width: 60%;
+  }
+  .logo{
+    max-width: 500px;
+    background-image: url("/public/Login/logoSescrita.png");
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .logo{
+    max-width: 300px;
+    background-image: url("/public/Login/logoSescrita.png");
+    object-fit: cover;
+  }
 }
