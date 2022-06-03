@@ -50,7 +50,6 @@
   left: 0;
   position: absolute;
   background-image: url("https://source.unsplash.com/1920x1080/?university");
-  /* background-image: url(../public/Login/uniplac.jpg) */
 }
 
 .formLogin {
@@ -64,18 +63,6 @@
   align-content: center;
   border-left: 1px solid #01375048;
 }
-
-/* .formLogin {
-  background-color: #6b91b654;
-  width: 40%; 
-  height:100%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  border-left: 1px solid #01375048;
-} */
 
 .logo{
   margin-left: auto;
@@ -137,50 +124,6 @@
   color: white;
 }
 
-.navTitulo{
-  color: white;
-}
-
-.navLateral{
-  width: 10%;
-  height: 100%;
-  position: absolute;
-  background-color: #262d35bb;
-  text-align: center;
-}
-
-.btnSair{
-  position: absolute;
-  color: white;
-  background-color: rgb(153, 88, 88);
-  bottom: 15px;
-  left: 5%;
-  padding: 5px;
-  border: none;
-}
-
-.btnSair:hover{
-  background-color:rgb(196, 125, 125)
-}
-
-.navLateral button{
-  font-size: 17px;
-  width: 90%;
-  margin-top: 30px;
-}
-
-.board{
-  left: 10%;
-  width: 90%;
-  height: 100%;
-  position: absolute;
-  background-color: rgb(235, 235, 235);
-}
-
-.conteudo{
-  padding-left: 25px;
-}
-
 .loader {
   animation: is-rotating 1s infinite;
   border: 6px solid #e5e5e5;
@@ -208,7 +151,6 @@
   }
   .logo{
     max-width: 500px;
-    background-image: url("/public/Login/logoSescrita.png");
     object-fit: cover;
   }
 }
@@ -217,7 +159,12 @@
 
   .logo{
     max-width: 300px;
-    background-image: url("/public/Login/logoSescrita.png");
     object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .formulario{
+    width: 40%;
   }
 }

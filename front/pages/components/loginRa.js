@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import { useState } from 'react'
 import axios from 'axios'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Login.module.css'
 import { useForm } from "react-hook-form";
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
@@ -24,7 +24,7 @@ function exibeEmail(email) {
   return primeiro + segundo //concatena novamente o email
 }
 //Função que define o que vai ser feito com usuario
-function Auth() {
+function Validation() {
   const { register, handleSubmit } = useForm()
   var email = "" //variavel que irá receber o email do usuario com *
 
@@ -147,7 +147,7 @@ function Auth() {
 }
 
 
-export default Auth
+export default Validation
 
 
 

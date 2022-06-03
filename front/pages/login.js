@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios'
 import { useForm } from "react-hook-form";
-import styles from '../styles/Home.module.css'
-import Auth from './components/loginRa';
+import styles from '../styles/Login.module.css'
+import Validation from './components/loginRa';
 
 import logo from '../public/Login/logo.png'
 
@@ -14,8 +14,6 @@ function exibeErro(msg) {
   document.getElementById("erro").innerHTML = msg.response.data.error
   return msg
 }
-
-
 
 export default function Home() {
   return (
@@ -35,7 +33,7 @@ export default function Home() {
           
           <h1 className={styles.tituloLogin}>LOGIN</h1>
           <div className={styles.formulario}>
-            <Auth></Auth>
+            <Validation></Validation>
             
           </div>
           <footer className={styles.footer}>
