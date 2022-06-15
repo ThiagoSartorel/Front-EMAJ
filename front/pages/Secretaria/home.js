@@ -1,11 +1,11 @@
 import axios from 'axios';
 import Head from 'next/head'
-import styles from '../styles/Menu.module.css'
+import styles from '../../styles/Menu.module.css'
 import { parseCookies, setCookie } from 'nookies'
 import { removeCookies } from "cookies-next";
 import Router from 'next/router'
-import Nav from './components/navMenu'
-import Auth from './components/auth'
+import Nav from '../components/navMenu'
+import Auth from '../components/auth'
 
 var userName = ""
 var user = ""
@@ -36,6 +36,10 @@ export default function Home() {
           <div className={styles.board}>
             <div className={styles.conteudo}>
               <h2>Bem vindo </h2><p id="Nome"></p>
+              <div className={styles.horasDashboard}>
+                <p>Total de horas: 60/60</p>
+                <p>Porcentagem: 100%</p>
+              </div>
             </div>
             <footer className={styles.footer}>
               <h4>NIU</h4>

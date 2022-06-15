@@ -10,7 +10,7 @@ function logado(token) {
     maxAge: 30 * 24 * 60 * 60,
     path: '/',
   });
-  Router.push('/home')
+  Router.push('/Aluno/home')
 }
 
 //Função para enviar a parcial do email para a tela
@@ -49,6 +49,7 @@ function Validation() {
         }
       } catch (e) {
         console.log("Erro ao buscar matricula")
+        document.getElementById("loading").hidden = true;
         document.getElementById("Mensagem").innerHTML = "Matrícula incorreta ou inexistente!"
         primeiro_login = 3
       }
@@ -84,6 +85,7 @@ function Validation() {
       document.getElementById("Mensagem").innerHTML = "";
       console.log("Logando")
       try {
+        //console.log(body.ra + body.senha)
         retorno = await axios.post(process.env.BACKEND + "login", {
           'ra': body.ra,
           'password': body.senha
